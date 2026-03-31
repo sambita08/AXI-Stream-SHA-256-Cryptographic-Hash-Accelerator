@@ -139,9 +139,6 @@ initial begin
     push_file('h222, check_fopen($fopen("./test_data/test2.bin", "rb")));
     push_file('h333, check_fopen($fopen("./test_data/test3.bin", "rb")));
     push_file('h444, check_fopen($fopen("./test_data/test4.bin", "rb")));
-    //push_file('h555, check_fopen($fopen("./test_data/test5.bin", "rb")));
-    //push_file('h666, check_fopen($fopen("./test_data/test6.bin", "rb")));
-   // push_file('h777, check_fopen($fopen("./test_data/test7.bin", "rb")));
     repeat(2000) @(posedge clk); // Wait for pipeline to flush — SHA-256 has ~70+ cycle latency
     $finish;
 end
